@@ -2,6 +2,10 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Gentium%20Book%20Basic:wght@400&family=Lato:wght@700&family=Montserrat:wght@400&family=Roboto:wght@700"
+    />
     <title>Prezentacja banerów</title>
     <style>
       #mini {
@@ -23,60 +27,26 @@
         margin: 10px;
       }
       #car {
-        width: 1080px;
-        height: 1920px;
-        border: 462px;
+        width: calc(540px * 0.7);
+        height: 672px;
+        border: none;
         margin: 10px;
+        overflow: hidden;
+      }
+
+      .main_header {
+        text-transform: uppercase;
+        font-family: "Roboto", sans-serif;
       }
     </style>
   </head>
   <body>
-    <h1>Prezentacja banerów</h1>
+    <h1 class="main_header">Prezentacja banerów</h1>
     <div>
       <iframe id="mini" src="electric-HTML/index.html"></iframe>
       <iframe id="fly" src="samolot/samolot-300x250-px/index.html"></iframe>
       <iframe id="fly_big" src="samolot/samolot-300x600-px/index.html"></iframe>
       <iframe id="car" src="samochod-HTML/index.html"></iframe>
     </div>
-    <div
-      style="
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-top: 12.3626%;
-        padding-bottom: 0;
-        box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
-        margin-top: 1.6em;
-        margin-bottom: 0.9em;
-        overflow: hidden;
-        border-radius: 8px;
-        will-change: transform;
-      "
-    >
-      <iframe
-        loading="lazy"
-        style="
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          border: none;
-          padding: 0;
-          margin: 0;
-        "
-        src="https://www.canva.com/design/DAGeLrCnqks/PRYkUX-jasuApBO3zQomSw/watch?embed"
-        allowfullscreen="allowfullscreen"
-        allow="fullscreen"
-      >
-      </iframe>
-    </div>
-    <a
-      href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGeLrCnqks&#x2F;PRYkUX-jasuApBO3zQomSw&#x2F;watch?utm_content=DAGeLrCnqks&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
-      target="_blank"
-      rel="noopener"
-      >Projekt</a
-    >
-    autorstwa Tomasz Białkowski
   </body>
 </html>
