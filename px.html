@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sraralaxa</title>
+  </head>
+  <body>
+    <tf-creative-preview-parallax id="parallax-view" class="view" active="">
+      <style scope="tf-creative-preview-parallax">
+        :host {
+          display: block;
+          padding: var(--tf-creative-preview-stage-padding);
+
+          --tf-creative-preview-dummy-text-size: 8px;
+          --tf-creative-preview-dummy-text-line-height: 20px;
+          --tf-creative-preview-dummy-body-padding: 32px;
+        }
+
+        :host([responsive]) {
+          padding-right: 0;
+          padding-bottom: 0;
+        }
+
+        .dummy-window {
+          overflow: auto;
+          background: #fff;
+        }
+
+        .dummy-window::-webkit-scrollbar {
+          width: 16px;
+          height: 16px;
+        }
+
+        .dummy-window::-webkit-scrollbar-track {
+          background-color: transparent;
+        }
+
+        .dummy-window::-webkit-scrollbar-thumb {
+          background-clip: content-box;
+          background-color: var(--paper-grey-300);
+          border: 4px solid transparent;
+          border-radius: 8px;
+        }
+
+        .dummy-body {
+          width: 100%;
+          padding: var(--tf-creative-preview-dummy-body-padding);
+          background: #fff;
+          box-sizing: border-box;
+          display: var(--layout-vertical_-_display);
+          -ms-flex-direction: var(--layout-vertical_-_-ms-flex-direction);
+          -webkit-flex-direction: var(
+            --layout-vertical_-_-webkit-flex-direction
+          );
+          flex-direction: var(--layout-vertical_-_flex-direction);
+        }
+
+        .dummy-text {
+          background-image: linear-gradient(
+            to bottom,
+            var(--paper-grey-100) var(--tf-creative-preview-dummy-text-size),
+            transparent var(--tf-creative-preview-dummy-text-size)
+          );
+          background-repeat: repeat-y;
+          background-size: 100%
+            var(--tf-creative-preview-dummy-text-line-height);
+        }
+
+        iframe {
+          border: none;
+          background: #fff;
+          margin: 24px auto;
+        }
+
+        .fullscreen iframe {
+          margin: calc(-1 * var(--tf-creative-preview-dummy-body-padding));
+        }
+
+        .fullscreen .dummy-text {
+          display: none;
+        }
+      </style>
+      <tf-creative-preview-resizable-container id="deviceFrame">
+        <div
+          id="dummyWindow"
+          class="dummy-window"
+          slot="content"
+          style="width: 412px; height: 732px"
+        >
+          <div class="dummy-body">
+            <div class="dummy-text" style="height: 708px"></div>
+            <iframe
+              id="iframe"
+              allowfullscreen=""
+              scrolling="no"
+              src="/paralax_simple/index.html"
+              height="250"
+              width="300"
+            >
+            </iframe>
+            <div class="dummy-text" style="height: 708px"></div>
+          </div>
+        </div>
+      </tf-creative-preview-resizable-container>
+    </tf-creative-preview-parallax>
+  </body>
+</html>
