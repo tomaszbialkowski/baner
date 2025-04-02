@@ -10,6 +10,7 @@
   <link href="gwdpage_style.css" rel="stylesheet" data-version="13" data-exports-type="gwd-page">
   <link href="gwdpagedeck_style.css" rel="stylesheet" data-version="14" data-exports-type="gwd-pagedeck">
   <link href="gwdgooglead_style.css" rel="stylesheet" data-version="9" data-exports-type="gwd-google-ad">
+  <link href="gwdimage_style.css" rel="stylesheet" data-version="17" data-exports-type="gwd-image">
   <style id="gwd-lightbox-style">
     .gwd-lightbox {
       overflow: hidden;
@@ -58,12 +59,29 @@
       width: 300px;
       height: 250px;
     }
+    .gwd-img-1ukl {
+      position: absolute;
+      width: 329px;
+      height: 397.19px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) translate3d(15px, 37px, 0px);
+    }
+    .gwd-parallax-1hlb {
+      position: absolute;
+      top: 0px;
+      width: 300px;
+      height: 250px;
+      left: 0px;
+    }
   </style>
   <script data-source="gwd_webcomponents_v1_min.js" data-version="2" data-exports-type="gwd_webcomponents_v1" src="gwd_webcomponents_v1_min.js"></script>
   <script data-source="gwdpage_min.js" data-version="13" data-exports-type="gwd-page" src="gwdpage_min.js"></script>
   <script data-source="gwdpagedeck_min.js" data-version="14" data-exports-type="gwd-pagedeck" src="gwdpagedeck_min.js"></script>
   <script data-source="https://s0.2mdn.net/ads/studio/Enabler.js" data-exports-type="gwd-google-ad" src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
   <script data-source="gwdgooglead_min.js" data-version="9" data-exports-type="gwd-google-ad" src="gwdgooglead_min.js"></script>
+  <script data-source="gwdimage_min.js" data-version="17" data-exports-type="gwd-image" src="gwdimage_min.js"></script>
+  <script data-source="gwdparallax_min.js" data-version="4" data-exports-type="gwd-parallax" src="gwdparallax_min.js"></script>
 </head>
 
 <body>
@@ -71,7 +89,12 @@
     <gwd-metric-configuration></gwd-metric-configuration>
     <gwd-pagedeck class="gwd-page-container" id="pagedeck">
       <gwd-page id="page1" class="gwd-page-wrapper gwd-page-size gwd-lightbox" data-gwd-width="300px" data-gwd-height="250px">
-        <div class="gwd-page-content gwd-page-size"></div>
+        <div class="gwd-page-content gwd-page-size">
+          <gwd-image source="assets/image.png" class="gwd-img-1ukl" id="image"></gwd-image>
+          <gwd-parallax id="gwd-parallax_1" class="gwd-parallax-1hlb">
+            <div assettype="image" source="assets/dziurka.png" width="875px" height="729.16px" xenter="-291px" xexit="-287.5px" yenter="-245px" yexit="-239.58px"></div>
+          </gwd-parallax>
+        </div>
       </gwd-page>
     </gwd-pagedeck>
   </gwd-google-ad>
